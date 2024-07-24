@@ -1,3 +1,11 @@
-const express = require("express");//forma de common js
+import express from "express";
 
-import express from "express";//ESM ECMA Script Modules
+const app = express();
+
+app.use("/",(req,res) => {
+    res.send("Hola mundo");
+});
+
+app.listen(4000, () => {
+    console.log("Servidor funcionando desde el puerto 4000");
+});
